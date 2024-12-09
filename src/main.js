@@ -1,20 +1,55 @@
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const image_home_1 = document.querySelector("#image_home-1")
+const image_home_2 = document.querySelector("#image_home-2")
+window.addEventListener("load", () => {
+  const listaImagenes = ["/images/paisaje3.jpg", "/images/paisaje.jfif", "/images/casa3.jpeg", "/images/casa1.jpeg"]
 
-setupCounter(document.querySelector('#counter'))
+  let i = 0;
+
+  image_home_1.style.cssText = `opacity:0`
+  image_home_2.style.cssText = `opacity:1`
+  const funcionTemporizador = () => {
+
+
+
+    image_home_1.style.cssText = `opacity:0`
+    image_home_2.style.cssText = `opacity:1`
+
+
+    image_home_1.addEventListener("transitionend", () => {
+
+
+      image_home_1.setAttribute("src", listaImagenes[i])
+      image_home_2.setAttribute("src", listaImagenes[i + 1])
+
+      image_home_1.style.cssText = `opacity:1`
+      image_home_2.style.cssText = `opacity:0`
+    })
+
+    image_home_2.addEventListener("transitionend", () => {
+
+
+      image_home_1.setAttribute("src", listaImagenes[i])
+      image_home_2.setAttribute("src", listaImagenes[i + 1])
+
+      image_home_1.style.cssText = `opacity:1`
+      image_home_2.style.cssText = `opacity:0`
+    })
+
+    if (i == (listaImagenes.length - 1)) {
+      // image_home.style.cssText = "animation:fade 1.6s ease"
+      //  clearInterval(intervalo)
+      i = 0
+
+      // setInterval(funcionTemporizador,1000)
+    }
+
+
+    i++
+  }
+
+  const intervalo = setInterval(funcionTemporizador, 4000)
+
+  intervalo()
+
+})
