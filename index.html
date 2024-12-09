@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Page title</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Concert+One&family=Edu+QLD+Beginner:wght@400..700&family=Nova+Script&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <meta property="og:title" content="Reserva tus hoteles ahora mismo">
+  <meta property="og:description"
+    content="En Airbnb podrás encontrar los mejores lugares en donde pasar momentos únicos">
+  <meta property="og:image"
+    content="https://firebasestorage.googleapis.com/v0/b/prueba-62d11.appspot.com/o/airbnbCapture.png?alt=media&token=dd170a9d-4826-48c0-b661-1e74e042418e">
+  <meta property="og:url" content="https://landing-airbnb.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reserva tus hoteles ahora mismo">
+  <meta name="twitter:description"
+    content="En Airbnb podrás encontrar los mejores lugares en donde pasar momentos únicos">
+  <meta name="twitter:image"
+    content="https://firebasestorage.googleapis.com/v0/b/prueba-62d11.appspot.com/o/airbnbCapture.png?alt=media&token=dd170a9d-4826-48c0-b661-1e74e042418e">
+
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="header">
+        <span class="name">Airbnb</span>
+        <div class="header_right">
+          <div>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.5"
+                  d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z"
+                  stroke="#1C274C" stroke-width="1.5" />
+                <path d="M15 18H9" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="icon-name">
+              Home
+            </span>
+          </div>
+
+          <div>
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="shopping-bag">
+                <path fill="#7D7D7D"
+                  d="M19,7H16V6A4,4,0,0,0,8,6V7H5A1,1,0,0,0,4,8V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V8A1,1,0,0,0,19,7ZM10,6a2,2,0,0,1,4,0V7H10Zm8,13a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V9H8v1a1,1,0,0,0,2,0V9h4v1a1,1,0,0,0,2,0V9h2Z">
+                </path>
+              </svg>
+            </span>
+            <span class="icon-name">
+              Shop
+            </span>
+          </div>
+          <div>
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="users-alt">
+                <path fill="#7D7D7D"
+                  d="M12.3,12.22A4.92,4.92,0,0,0,14,8.5a5,5,0,0,0-10,0,4.92,4.92,0,0,0,1.7,3.72A8,8,0,0,0,1,19.5a1,1,0,0,0,2,0,6,6,0,0,1,12,0,1,1,0,0,0,2,0A8,8,0,0,0,12.3,12.22ZM9,11.5a3,3,0,1,1,3-3A3,3,0,0,1,9,11.5Zm9.74.32A5,5,0,0,0,15,3.5a1,1,0,0,0,0,2,3,3,0,0,1,3,3,3,3,0,0,1-1.5,2.59,1,1,0,0,0-.5.84,1,1,0,0,0,.45.86l.39.26.13.07a7,7,0,0,1,4,6.38,1,1,0,0,0,2,0A9,9,0,0,0,18.74,11.82Z">
+                </path>
+              </svg>
+            </span>
+            <span class="icon-name">
+              Shop
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="home">
+        <div class="imageCaja">
+          <div class="imageCaja_content">
+            <img id="image_home-1" src="/images/paisaje.jfif">
+            <img id="image_home-2" src="/images/paisaje2.jpg" alt="·">
+            <div class="message">
+              <h1>we are Airbnb</h1>
+              <h3>cheaps hotels</h3>
+              <h3>always thinking about giving you the best experience ;&rpar; </h3>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="details">
+          <div>
+            <span>location</span>
+            <span>peru-lima</span>
+          </div>
+          <span class="line"></span>
+          <div>
+            <span>check in</span>
+            <span>add date</span>
+          </div>
+          <span class="line"></span>
+          <div>
+            <span>checkout</span>
+            <span>add date</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="popular">
+        <h1>Popular hotels</h1>
+        <div class="popular_content">
+          <div class="popular_content-card">
+            <img src="/images/casa3.jpeg"></img>
+            <div class="info">
+              <div class="info-first">
+                <p>Hotel num 1</p>
+                <p>
+                  <span>USD</span>
+                  <span>350</span>
+
+                </p>
+              </div>
+              <div>
+                Jron - 700 AV los treboles
+              </div>
+            </div>
+          </div>
+          <div class="popular_content-card">
+            <img src="/images/casa3.jpeg"></img>
+            <div class="info">
+              <div class="info-first">
+                <p>Hotel num 1</p>
+                <p>
+                  <span>USD</span>
+                  <span>350</span>
+
+                </p>
+              </div>
+              <div>
+                Jron - 700 AV los treboles
+              </div>
+            </div>
+          </div>
+          <div class="popular_content-card">
+            <img src="/images/casa3.jpeg"></img>
+            <div class="info">
+              <div class="info-first">
+                <p>Hotel num 1</p>
+                <p>
+                  <span>USD</span>
+                  <span>350</span>
+
+                </p>
+              </div>
+              <div>
+                Jron - 700 AV los treboles
+              </div>
+            </div>
+          </div>
+
+          <div class="popular_content-card">
+            <img src="/images/casa3.jpeg"></img>
+            <div class="info">
+              <div class="info-first">
+                <p>Hotel num 1</p>
+                <p>
+                  <span>USD</span>
+                  <span>350</span>
+
+                </p>
+              </div>
+              <div>
+                Jron - 700 AV los treboles
+              </div>
+            </div>
+          </div>
+          <div class="popular_content-card">
+            <img src="/images/casa3.jpeg"></img>
+            <div class="info">
+              <div class="info-first">
+                <p>Hotel num 1</p>
+                <p>
+                  <span>USD</span>
+                  <span>350</span>
+
+                </p>
+              </div>
+              <div>
+                Jron - 700 AV los treboles
+              </div>
+            </div>
+          </div>
+          <div class="popular_content-card">
+            <img src="/images/casa3.jpeg"></img>
+            <div class="info">
+              <div class="info-first">
+                <p>Hotel num 1</p>
+                <p>
+                  <span>USD</span>
+                  <span>350</span>
+
+                </p>
+              </div>
+              <div>
+                Jron - 700 AV los treboles
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clientsCaja">
+        <div class="clientsCaja-real">
+          <h1>Nuestros clientes dicen...</h1>
+          <div class="clientsCaja_content">
+            <div class="card">
+              <div class="perfil">
+                <img src="/images/linus.jpeg">
+              </div>
+              <p>id like to say... I love that bussines cause they makes me to earn a lot of money. Thanks!! </p>
+            </div>
+            <div class="card">
+              <div class="perfil">
+                <img src="/images/dinesh.jpeg">
+              </div>
+              <p>id like to say... I love that bussines cause they makes me to earn a lot of money. Thanks!! </p>
+            </div>
+            <div class="card">
+              <div class="perfil">
+                <img src="/images/steve.jpeg">
+              </div>
+              <p>id like to say... I love that bussines cause they makes me to earn a lot of money. Thanks!! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <h3>Sobre nosotros </h5>
+          <p>Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Possimus recusandae ut
+            commodi doloribus incidun.</p>
+          <div class="boton">
+            Ver mas
+          </div>
+      </div>
+      <div class="footer">
+
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#353535" fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H12V13H11C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H12V9.5C12 7.567 13.567 6 15.5 6H16.1C16.6523 6 17.1 6.44772 17.1 7C17.1 7.55228 16.6523 8 16.1 8H15.5C14.6716 8 14 8.67157 14 9.5V11H16.1C16.6523 11 17.1 11.4477 17.1 12C17.1 12.5523 16.6523 13 16.1 13H14V20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6Z"
+              fill="#000000" />
+          </svg>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z"
+              fill="#0F0F0F" />
+            <path fill="#353535" fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z"
+              fill="#0F0F0F" />
+          </svg>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#353535"
+              d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z"
+              stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path stroke="#353535"
+              d="M10 12C8.34315 12 7 13.3431 7 15C7 16.6569 8.34315 18 10 18C11.6569 18 13 16.6569 13 15V6C13.3333 7 14.6 9 17 9"
+              stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+
+      </div>
+
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+  <script type="text/javascript">
+    const image_home_1 = document.querySelector("#image_home-1")
+    const image_home_2 = document.querySelector("#image_home-2")
+    window.addEventListener("load", () => {
+      const listaImagenes = ["paisaje3.jpg", "paisaje.jfif", "casa3.jpeg", "casa1.jpeg"]
+
+      let i = 0;
+
+      image_home_1.style.cssText = `opacity:0`
+      image_home_2.style.cssText = `opacity:1`
+      const funcionTemporizador = () => {
+
+
+
+        image_home_1.style.cssText = `opacity:0`
+        image_home_2.style.cssText = `opacity:1`
+
+
+        image_home_1.addEventListener("transitionend", () => {
+
+
+          image_home_1.setAttribute("src", listaImagenes[i])
+          image_home_2.setAttribute("src", listaImagenes[i + 1])
+
+          image_home_1.style.cssText = `opacity:1`
+          image_home_2.style.cssText = `opacity:0`
+        })
+
+        image_home_2.addEventListener("transitionend", () => {
+
+
+          image_home_1.setAttribute("src", listaImagenes[i])
+          image_home_2.setAttribute("src", listaImagenes[i + 1])
+
+          image_home_1.style.cssText = `opacity:1`
+          image_home_2.style.cssText = `opacity:0`
+        })
+
+        if (i == (listaImagenes.length - 1)) {
+          // image_home.style.cssText = "animation:fade 1.6s ease"
+          //  clearInterval(intervalo)
+          i = 0
+
+          // setInterval(funcionTemporizador,1000)
+        }
+
+
+        i++
+      }
+
+      const intervalo = setInterval(funcionTemporizador, 4000)
+
+
+    })
+  </script>
+</body>
+
+</html>

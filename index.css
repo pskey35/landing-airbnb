@@ -1,0 +1,607 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+*::selection {
+  color: white;
+  background: rgb(7, 193, 255);
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  background: rgba(239, 246, 255, 1);
+  padding: 0;
+  overflow: auto;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .name {
+  font-size: 45px;
+  font-family: "Edu QLD Beginner", cursive;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+
+.header .header_right {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .header_right div {
+  background: rgb(235 235 235 / 28%);
+  border-radius: 5px;
+  transition: all 200ms ease;
+  padding: 5px 0;
+  cursor: pointer;
+  width: 30%;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  color: rgb(37, 37, 37);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.header .header_right div:hover {
+  background: rgb(231, 231, 231);
+  border: 1px solid rgb(141, 141, 141);
+  color: rgb(75, 75, 75);
+}
+
+.header_right div span:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.header_right div .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header_right div .icon-name {
+  font-size: 10px;
+  line-height: 0.7;
+}
+
+.container .home {
+  width: 95%;
+  height: 360px;
+  position: relative;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin: 0 auto;
+  max-width: 1700px;
+}
+
+.home .imageCaja {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.home .imageCaja .imageCaja_content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.home .imageCaja_content img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: all 4000ms ease;
+  animation: entrada 500ms ease;
+  opacity: 0;
+}
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.home .imageCaja .imageCaja_content .message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4%;
+  z-index: 10;
+  color: white;
+}
+.message h1 {
+  font-family: "Edu QLD Beginner", cursive;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 60px;
+}
+
+.message h3:nth-child(2) {
+  font-size: 35px;
+  color: rgb(238 238 238 / 86%);
+  font-size: 35px;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.message h3:nth-child(3) {
+  font-size: 25px;
+  color: rgb(238 238 238 / 86%);
+  font-size: 35px;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.home .details {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: rgb(241 241 241 / 58%);
+  border: 1px solid rgb(245 245 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  z-index: 20;
+  width: 85%;
+  backdrop-filter: blur(7px);
+  height: 70px;
+}
+
+.home .details div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .details div span {
+  text-align: center;
+}
+
+.home .details .line {
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background: rgba(63, 63, 63, 0.089);
+  border-radius: 100%;
+}
+
+.home .details div span:nth-child(1) {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home .details div span:nth-child(2) {
+  text-align: 8px;
+  color: rgba(0, 0, 0, 0.651);
+}
+
+.container .popular {
+  width: 100%;
+  height: min-content;
+  padding: 10px;
+  margin-top: 8vh;
+  margin-bottom: 4vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(107, 107, 107);
+  margin-bottom: 3vmin;
+  background: linear-gradient(to right, #0098e1 8%, #5db0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.popular .popular_content {
+  padding: 0 10px;
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(2, 300px);
+  grid-auto-flow: column;
+  grid-auto-columns: 200px;
+  grid-auto-rows: 200px;
+  justify-content: space-around;
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1500px;
+}
+
+.popular .popular_content .popular_content-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid rgb(233 233 233);
+  overflow: hidden;
+  cursor: pointer;
+  background: rgb(247 247 247);
+  transition: transform 340ms ease, box-shadow 500ms ease, border 200ms ease;
+}
+
+.popular_content .popular_content-card:hover {
+  border: 2px solid rgb(161 223 178);
+  box-shadow: 0 0 10px 1px #00ff3721;
+  transform: scale(1.02);
+}
+
+.popular .popular_content > .popular_content-card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.popular_content-card .info {
+  height: 35%;
+  padding: 10px 15px;
+}
+
+.popular_content-card .info .info-first {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.popular_content-card .info .info-first p:nth-child(1) {
+  font-size: 15px;
+  color: rgb(190, 190, 190);
+  display: grid;
+  place-items: center;
+}
+
+.info .info-first p:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.info-first p:nth-child(2) span:nth-child(1) {
+  font-size: 22px;
+  color: #4ed383;
+  margin-right: 6px;
+  font-weight: 1000;
+}
+.info-first p:nth-child(2) span:nth-child(2) {
+  color: #4ed383;
+}
+
+.container .clientsCaja {
+  padding: 20px;
+  margin: 5vmax 0;
+}
+
+.clientsCaja .clientsCaja-real {
+  width: 100%;
+  height: 380px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.clientsCaja .clientsCaja-real > h1 {
+  margin-bottom: 20px;
+  font-family: "Concert One", sans-serif;
+  font-weight: 50;
+  font-style: normal;
+}
+
+.clientsCaja .clientsCaja-real .clientsCaja_content {
+  width: 100%;
+  overflow: auto;
+  padding: 10px 35px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.clientsCaja_content .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  border-radius: 10px;
+  border: 2px solid rgb(228, 240, 248);
+  box-shadow: 0 0 10px 1px rgba(1, 141, 255, 0.068);
+  background: rgb(255, 255, 255);
+  min-width: 25%;
+  margin: 5px;
+}
+
+.clientsCaja_content .card:nth-child(2) {
+  min-width: 40%;
+  height: 235px;
+  margin: 0 15px;
+}
+
+.clientsCaja_content .card .perfil {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgb(247, 247, 247);
+  outline: 2px solid rgba(0, 128, 255, 0.185);
+}
+
+.perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clientsCaja_content .card p {
+  text-align: center;
+  padding: 5% 10%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container .about {
+  width: 90%;
+  height: 200px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 2px solid rgb(228, 228, 228);
+  background: rgb(41, 41, 41);
+  color: white;
+}
+
+.about h3 {
+  /*color:rgb(55, 135, 255);
+  font-size:30px;*/
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+
+.about p {
+  text-align: center;
+  padding: 0 30%;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  color: rgb(202, 202, 202);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.about .boton {
+  border-radius: 7px;
+  padding: 10px 50px;
+  border: 1px solid rgb(55, 135, 255);
+  background: rgb(11, 137, 255);
+  transition: all 120ms ease;
+  cursor: pointer;
+}
+
+.about .boton:hover {
+  border: 1px solid rgb(47, 130, 255);
+  background: rgb(31, 147, 255);
+}
+
+.container .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #ebebeb;
+  height: 100px;
+  margin-top: 50px;
+  background: rgb(0 0 0 / 8%);
+  color: white;
+}
+
+.footer span {
+  width: 40px;
+  height: 40px;
+  margin: 0 20px;
+  font-size: 18px;
+  transition: all 200ms ease;
+  background: rgb(222 222 222);
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+}
+
+.footer span:hover{
+  background:rgb(231, 231, 231);
+  border-radius:1000px;
+}
+
+.footer span:hover > svg path{
+  fill:#71b3ff;
+  transition:all 250ms ease;
+}
+
+.footer span:nth-child(3):hover > svg path{
+  stroke: #71b3ff;
+  fill:transparent;
+}
+
+
+@media (max-width: 900px) {
+  .header .header_right {
+    width: 70%;
+  }
+  .header .name {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .message h1 {
+    font-size: 50px;
+  }
+
+  .message h3:nth-child(2) {
+    font-size: 22px;
+    color: rgb(238 238 238 / 86%);
+  }
+  .message h3:nth-child(3) {
+    font-size: 20px;
+    color: rgb(238 238 238 / 86%);
+  }
+
+  .container .home {
+    width: 100%;
+  }
+
+  .home .imageCaja {
+    padding: 10px;
+  }
+  .home .imageCaja .imageCaja_content {
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  .home .details {
+    height: 55px;
+    transform: translateY(25%);
+    width: 99%;
+  }
+
+  .home .imageCaja .imageCaja_content .message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+    padding-left: 3%;
+    z-index: 10;
+    color: white;
+  }
+
+  .popular .popular_content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .clientsCaja {
+    padding: 0;
+  }
+  .clientsCaja .clientsCaja-real h1 {
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  .clientsCaja .clientsCaja-real .clientsCaja_content {
+    overflow: auto;
+  }
+
+  .clientsCaja_content .card {
+    height: 180px !important;
+    min-width: 300px !important;
+  }
+  /*
+  .clientsCaja_content .card:nth-child(2) {
+    min-width: 300px;
+    height: 235px;
+  }*/
+
+  .about p {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 900px) {
+  .container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .container::-webkit-scrollbar-track {
+    background-color: #ececece3;
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    background-color: #adadad;
+    border-radius: 5px;
+    transition: all 3s;
+    cursor: pointer;
+  }
+
+  .container::-webkit-scrollbar-thumb:hover {
+    background-color: #bdbdbd; /* Color del scroll al pasar el cursor */
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
